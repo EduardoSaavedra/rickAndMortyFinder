@@ -9,8 +9,7 @@ const ServiceTerms = () => {
       “Cliente” en este acto declara ser una persona física, mayor de edad y contar con
       capacidad para contratar y contraer toda clase de obligaciones y que entiende plenamente
       el contenido de los presentes Términos y Condiciones. Por lo que, tanto el “Cliente” como
-      “ENCONTA” (ambas en lo sucesivo las “Partes), acuerdan sujetarse a los siguientes términos
-      y condiciones:
+      
     </p>
   )
 }
