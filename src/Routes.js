@@ -1,11 +1,11 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import { Routes } from 'react-router'
-import ServiceTerms from './test'
+import CharacterList from './views'
 
 const RoutesList = () => (
   <Routes>
-    <Route path='/' element={<ServiceTerms />} />
+    <Route path='/' element={<CharacterList />} />
   </Routes>
 )
 
