@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
 import CharactersActions from 'actions/charactersActions'
+import Pagination from '@mui/material/Pagination';
+
 import CharactersStore from '/Users/usuario-rtd/Desktop/challenge/src/stores /charactersStore.js'
+import Character from './characters'
 
 const getCurrentState = () => CharactersStore.getCharactersList()
 
@@ -22,13 +25,10 @@ const [characters, setCharacters] = useState(getCurrentState())
   }
 
   return (
-    <p>
-      Declara Servicios Digitales Enconta, ser una sociedad Anónima de Capital Variable
-      debidamente constituida en México, cuyo nombre comercial es “ENCONTA”. Por su parte el
-      “Cliente” en este acto declara ser una persona física, mayor de edad y contar con
-      capacidad para contratar y contraer toda clase de obligaciones y que entiende plenamente
-      el contenido de los presentes Términos y Condiciones. Por lo que, tanto el “Cliente” como
-    </p>
+    <div className='character-layout'>
+    <Character characters={characters}/>    
+    <Pagination count={10} />
+    </div>
   )
 }
 
