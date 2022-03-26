@@ -16,7 +16,6 @@ class CharactersStore extends BaseStore {
   } 
 
   setCharactersList ({info, results}) {
-    console.log(info)
     const {pages, count} = info
     this.charactersList = results
     this.totalPages = pages
@@ -25,6 +24,10 @@ class CharactersStore extends BaseStore {
 
   getCharactersList () {
     return this.charactersList
+  }
+
+  getTotalPages () {
+    return this.totalPages
   }
 }
 
