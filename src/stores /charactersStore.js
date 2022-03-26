@@ -29,6 +29,10 @@ class CharactersStore extends BaseStore {
   getTotalPages () {
     return this.totalPages
   }
+
+  getTotalItems () {
+    return this.totalItems
+  }
 }
 
 export default CharactersStore.getInstance()
