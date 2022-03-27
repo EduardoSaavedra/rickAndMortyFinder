@@ -61,10 +61,13 @@ const CharacterList = () => {
     CharactersActions.getCharactersList(params);
 
     setValues({name: '', gender: ''})
+    navigate(`/`, { replace: true });
   };
 
   const cleanFilter = () => {
     CharactersActions.getCharactersList({})
+    setValues({name: '', gender: ''})
+    navigate(`/`, { replace: true });
   }
 
   const handleChange = (event, value) => {

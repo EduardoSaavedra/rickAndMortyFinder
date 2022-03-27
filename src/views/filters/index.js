@@ -6,11 +6,13 @@ import Select from 'components/select'
 const GENDERS = [
 	{id: 'Female', label: 'Mujer'},
 	{id: 'Male', label: 'Hombre'},
-	{id: 'Genderless', label: 'Sin género'}
+	{id: 'Genderless', label: 'Sin género'},
+	{id: 'unknown', label: 'Desconocido'}
 ]
 
 const Filters = ({ fields, handleFilters, onFilter, cleanFilter }) => {
   const { name, gender } = fields;
+	const disabledButton = name || gender
   return (
     <div className="character-filters">
       <section className="character-fields">
@@ -34,7 +36,7 @@ const Filters = ({ fields, handleFilters, onFilter, cleanFilter }) => {
         />         
       </section>
       <section className="character-fields">
-        <Button variant="contained" onClick={onFilter}>
+        <Button variant="contained" onClick={onFilter} disabled={!disabledButton}>
           Filtrar
         </Button>
         <Button variant="outlined" onClick={cleanFilter}>
