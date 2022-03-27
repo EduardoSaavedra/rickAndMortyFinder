@@ -39,8 +39,11 @@ const CharacterList = () => {
 
   const loadData = () => {
     const { search } = location;
+    const { name, gender } = fields;
     const params = {
       page: search,
+      name: name,
+      gender: gender
     };
     CharactersActions.getCharactersList(params);
   };
@@ -53,14 +56,7 @@ const CharacterList = () => {
   };
 
   const filter = () => {
-    const { name, gender } = fields;
-    const params = {
-      name: name,
-      gender: gender
-    };
-    CharactersActions.getCharactersList(params);
-
-    setValues({name: '', gender: ''})
+    loadData()
     navigate(`/`, { replace: true });
   };
 
@@ -75,11 +71,11 @@ const CharacterList = () => {
       ...prevInvoice,
       search: value,
     }));
-    navigate(`/?page=${value}`, { replace: true });
   };
 
   return (
-    <div className="character-layout">
+    <div className="character__layout">
+      <h1 className='character__title'>Rick And Morty challenge</h1>
       <Filters
         fields={fields}
         handleFilters={handleFieldChange}
@@ -88,13 +84,14 @@ const CharacterList = () => {
       />
       <p>Número de personajes: {totalItems}</p>
       <Character characters={characters} />
-      <div className="character-paginator">
+      {totalPages !== 1 &&  <div className="character__paginator">
         <Pagination
           count={totalPages}
           onChange={handleChange}
           color="primary"
+          shape="rounded"
         />
-      </div>
+      </div>}     
     </div>
   );
 };

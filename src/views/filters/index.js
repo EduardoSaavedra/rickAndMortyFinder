@@ -14,8 +14,8 @@ const Filters = ({ fields, handleFilters, onFilter, cleanFilter }) => {
   const { name, gender } = fields;
 	const disabledButton = name || gender
   return (
-    <div className="character-filters">
-      <section className="character-fields">
+    <div className="character__filters">
+      <section className="character__fields">
         <TextField
           data-testid="name"
           label="Nombre"
@@ -35,7 +35,7 @@ const Filters = ({ fields, handleFilters, onFilter, cleanFilter }) => {
 					options={GENDERS}
         />         
       </section>
-      <section className="character-fields">
+      <section className="character__fields">
         <Button variant="contained" onClick={onFilter} disabled={!disabledButton}>
           Filtrar
         </Button>
