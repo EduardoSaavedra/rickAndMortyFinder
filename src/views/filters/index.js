@@ -36,10 +36,10 @@ const Filters = ({ fields, handleFilters, onFilter, cleanFilter }) => {
         />         
       </section>
       <section className="character__fields">
-        <Button variant="contained" onClick={onFilter} disabled={!disabledButton}>
+        <Button data-testid="button-filter" variant="contained" onClick={onFilter} disabled={!disabledButton}>
           Filter
         </Button>
-        <Button variant="outlined" onClick={cleanFilter}>
+        <Button data-testid="button-clean" variant="outlined" onClick={cleanFilter}>
           Clean
         </Button>
       </section>

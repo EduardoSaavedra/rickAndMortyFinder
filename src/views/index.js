@@ -75,14 +75,14 @@ const CharacterList = () => {
 
   return (
     <div className="character__layout">
-      <h1 className='character__title'>Rick And Morty challenge</h1>
+      <h1 data-testid="character-title" className='character__title'>Rick And Morty challenge</h1>
       <Filters
         fields={fields}
         handleFilters={handleFieldChange}
         onFilter={filter}
         cleanFilter={cleanFilter}
       />
-      <p>Number of characters: {totalItems}</p>
+      <p data-testid="character-counter">Number of characters: {totalItems}</p>
       <Character characters={characters} />
       {totalPages !== 1 &&  <div className="character__paginator">
         <Pagination
