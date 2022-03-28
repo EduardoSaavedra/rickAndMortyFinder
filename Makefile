@@ -1,4 +1,3 @@
-.DEFAULT_GOAL := help
 setup: clean ## Setup project
 	npm install
 
