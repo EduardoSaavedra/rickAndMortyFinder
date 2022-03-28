@@ -7,9 +7,9 @@ const Character = ({ characters }) => {
       {characters.map(({ image, name, id }) => {
         return (
           <section key={id}>
-            <p className="character__text"> {name} </p>
-            <img className="character__image" src={image} alt={name} />
-            <div className="character__text">
+            <p data-testid="character-name" className="character__text"> {name} </p>
+            <img data-testid="character-image" className="character__image" src={image} alt={name} />
+            <div data-testid="character-link" className="character__text">
               <Link href={`/personaje/${id}`}>Ver detalle</Link>
             </div>
           </section>
