@@ -18,7 +18,7 @@ const Filters = ({ fields, handleFilters, onFilter, cleanFilter }) => {
       <section className="character__fields">
         <TextField
           data-testid="name"
-          label="Nombre"
+          label="Name"
           id="name"
           size="small"
           value={name}
@@ -26,7 +26,7 @@ const Filters = ({ fields, handleFilters, onFilter, cleanFilter }) => {
         />
         <Select
           data-testid="gender"
-          label="Género"
+          label="Gender"
           id="gender"
           value={gender}
           size="small"
@@ -37,10 +37,10 @@ const Filters = ({ fields, handleFilters, onFilter, cleanFilter }) => {
       </section>
       <section className="character__fields">
         <Button variant="contained" onClick={onFilter} disabled={!disabledButton}>
-          Filtrar
+          Filter
         </Button>
         <Button variant="outlined" onClick={cleanFilter}>
-          Limpiar
+          Clean
         </Button>
       </section>
     </div>

@@ -13,5 +13,17 @@ export default {
 			.catch(error => {
 				throw error
 			})
-	}
+	},
+  getSingleCharacter(id) {
+		return API.GetSingleCharacter(id)
+			.then(({data}) => {
+				AppDispatcher.handleAction({
+					actionType: 'CHARACTER_RECEIVED',
+					data
+				})
+			})
+			.catch(error => {
+				throw error
+			})
+	},
 }

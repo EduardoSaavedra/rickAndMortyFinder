@@ -7,10 +7,13 @@ class CharactersStore extends BaseStore {
     this.totalPages = 1
     this.totalItems = 0
     this.currentPage = 1
-
+    this.characterInfo = {}
     this.actions = {
       CHARACTERS_RECEIVED: action => {
         this.setCharactersList(action.data)
+      },
+      CHARACTER_RECEIVED: action => {
+        this.setCharacter(action.data)      
       }
     }
   } 
@@ -20,6 +23,14 @@ class CharactersStore extends BaseStore {
     this.charactersList = results
     this.totalPages = pages
     this.totalItems = count
+  }
+
+  setCharacter (character) {
+    this.characterInfo= character
+  }
+
+  getCharacter () {
+    return this.characterInfo
   }
 
   getCharactersList () {

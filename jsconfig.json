@@ -18,7 +18,7 @@
     "paths": {
       "api": ["api/"],
       "actions/*": ["actions/*"],
-      "stores": ["stores/*"]     
+      "stores": ["stores"]     
     }
   },
   "exclude": ["node_modules", "build", "alias.js", "*/serviceWorker.js"]

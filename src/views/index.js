@@ -5,7 +5,7 @@ import { useFormFields } from "customeHooks";
 import CharactersActions from "actions/charactersActions";
 import Pagination from "@mui/material/Pagination";
 
-import CharactersStore from "/Users/usuario-rtd/Desktop/challenge/src/stores /charactersStore.js";
+import CharactersStore from "../stores /charactersStore.js";
 import Character from "./characters";
 import Filters from "./filters";
 
@@ -82,7 +82,7 @@ const CharacterList = () => {
         onFilter={filter}
         cleanFilter={cleanFilter}
       />
-      <p>Número de personajes: {totalItems}</p>
+      <p>Number of characters: {totalItems}</p>
       <Character characters={characters} />
       {totalPages !== 1 &&  <div className="character__paginator">
         <Pagination
